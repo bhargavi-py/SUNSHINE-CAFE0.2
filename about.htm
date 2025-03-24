@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunshine Cafe - About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="menu.htm">Menu</a></li>
+            <li><a href="about.htm">About Us</a></li>
+            <li><a href="contact.htm">Contact</a></li>
+        </ul>
+    </nav>
+
+    <button class="hamburger" onclick="toggleNav()">⋮</button>
+    <nav id="sidebar">
+        <ul>
+            <li><a href="index.htm">🏠 Home</a></li>
+            <li><a href="menu.htm">☕ Menu</a></li>
+            <li><a href="about.htm">📖 About Us</a></li>
+            <li><a href="contact.htm">📞 Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>About Sunshine Cafe</h1>
+        <p>Sunshine Cafe was founded in 2025 to bring joy through coffee and desserts. Our mission is to provide a cozy and welcoming environment where customers can enjoy high-quality coffee and delicious treats.</p>
+        <p>We source our ingredients from the finest suppliers to ensure that every cup of coffee and every bite of dessert is a delightful experience. Our team is dedicated to making your visit to Sunshine Cafe a memorable one.</p>
+        <button id="readMoreBtn" onclick="toggleReadMore()">Read More</button>
+        <div id="readMoreContent" style="display: none;">
+            <p>At Sunshine Cafe, we also host community events and workshops to bring people together. From coffee brewing classes to dessert-making sessions, there's always something exciting happening here!</p>
+            <p>We believe in sustainability and use eco-friendly packaging for all our products. Join us in making a positive impact on the environment while enjoying your favorite treats.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sunshine Cafe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            if (!isLoggedIn) {
+                alert('You must log in to access the website.');
+                window.location.href = 'login.htm';
+            }
+        });
+
+        function toggleNav() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+
+        function toggleReadMore() {
+            const content = document.getElementById('readMoreContent');
+            const button = document.getElementById('readMoreBtn');
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                button.textContent = 'Read Less';
+            } else {
+                content.style.display = 'none';
+                button.textContent = 'Read More';
+            }
+        }
+    </script>
+</body>
+</html>
+

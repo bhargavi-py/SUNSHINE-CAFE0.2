@@ -1,0 +1,675 @@
+/* General Styles */
+body {
+    background-color: #f4f4f4; /* Light Gray */
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    color: #f5f5f5; /* Light Gray */
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8B4513; /* SaddleBrown */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.nav-sidebar {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    margin-right: 15px;
+}
+
+.nav-sidebar:hover {
+    color: #FFD700; /* Gold */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Gold */
+    background-color: #4a2c2a; /* Darker background */
+    border-radius: 5px;
+}
+
+/* Main Content Styling */
+.menu, main {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for better readability */
+    margin: auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    color: #333333; /* Dark Gray */
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: Impact, serif;
+    color: #8B4513; /* SaddleBrown */
+}
+
+h2 {
+    font-size: 30px;
+    font-family: Impact, serif;
+    color: #8B4513; /* SaddleBrown */
+}
+
+p {
+    text-align: center;
+    color: #333333; /* Dark Gray */
+}
+
+.established {
+    font-style: italic;
+    color: #333333; /* Dark Gray */
+}
+
+/* Menu Items */
+.item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 8px 0;
+    color: #333333; /* Dark Gray */
+}
+
+.item:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Light background on hover */
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.flavor, .dessert {
+    text-align: left;
+    width: 75%;
+}
+
+.price {
+    text-align: right;
+    width: 25%;
+}
+
+/* Menu Images */
+.menu-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.menu-img:hover {
+    transform: scale(1.1); /* Slightly enlarge image on hover */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Images */
+img {
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+    width: 50px;
+}
+
+/* Horizontal Line */
+hr {
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+}
+
+.bottom-line {
+    margin-top: 25px;
+}
+
+/* Footer */
+footer {
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4a2c2a;
+    color: white;
+    border-radius: 10px;
+}
+
+footer a:hover {
+    color: #FFD700; /* Gold */
+    text-decoration: underline;
+}
+
+.address {
+    margin-bottom: 5px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFD700; /* Gold */
+}
+
+/* Marquee Text */
+.marquee-text {
+    color: #FFD700; /* Gold */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Intro Section */
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    color: #333333; /* Dark Gray */
+}
+
+.intro-content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.intro h2 {
+    font-size: 30px;
+    color: #8B4513; /* SaddleBrown */
+}
+
+.intro p {
+    font-size: 18px;
+    color: #333333; /* Dark Gray */
+}
+
+.intro-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* Map Container */
+.map-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    color: #333333; /* Dark Gray */
+}
+
+.map-container h2 {
+    font-size: 30px;
+    color: #8B4513; /* SaddleBrown */
+    margin-bottom: 15px;
+}
+
+/* Highlights Section */
+.highlights {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    color: #333333; /* Dark Gray */
+    text-align: center;
+}
+
+.highlights h2 {
+    font-size: 30px;
+    color: #8B4513; /* SaddleBrown */
+    margin-bottom: 20px;
+}
+
+.highlight {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    vertical-align: top;
+}
+
+.highlight:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Light background on hover */
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.highlight img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.highlight p {
+    font-size: 16px;
+    color: #333333; /* Dark Gray */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu, main {
+        width: 95%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Improved spacing for sections */
+section {
+    margin-bottom: 30px;
+}
+
+/* Grid View */
+.grid-view ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.grid-view ul li {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+/* Font Colors */
+body {
+    color: #f5f5f5; /* Light Gray */
+}
+
+h1, h2 {
+    color: #8B4513; /* SaddleBrown */
+}
+
+p, .item, .radio-group label {
+    color: #333333; /* Dark Gray */
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #FFD700; /* Gold */
+}
+
+.marquee-text {
+    color: #FFD700; /* Gold */
+}
+
+/* Login Form */
+.login-form {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    color: #333333; /* Dark Gray */
+}
+
+.login-form h1 {
+    font-size: 30px;
+    color: #8B4513; /* SaddleBrown */
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333333; /* Dark Gray */
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #8B4513; /* SaddleBrown */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.login-form button:hover {
+    background-color: #FFD700; /* Gold */
+}
+
+/* Register Form */
+.register-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+    color: #333;
+}
+
+.register-form h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #8B4513;
+}
+
+.register-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.register-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.register-form button:hover {
+    background-color: #FFD700; /* Gold */
+}
+
+/* Page Header */
+.page-header {
+    background-color: #8B4513; /* SaddleBrown */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.page-header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.page-header p {
+    font-size: 18px;
+    margin: 5px 0 0;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #8B4513; /* SaddleBrown */
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0 0 10px;
+    font-family: 'Georgia', serif;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.feature {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+}
+
+.feature img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+}
+
+.feature h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #8B4513;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive Design for Features Section */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        max-width: 90%;
+        flex: 1 1 90%;
+    }
+}
+
+/* Full-Screen Mode */
+.full-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+    padding: 20px;
+    background-color: #f4f4f4; /* Light Gray */
+}
+
+/* Button Styles */
+button {
+    background-color: #8B4513; /* SaddleBrown */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #FFD700; /* Gold */
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #8B4513; /* SaddleBrown */
+    outline: none;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #8B4513; /* SaddleBrown */
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #8B4513;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Filter Group */
+.filter-group {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-group button {
+    background-color: #8B4513; /* SaddleBrown */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.filter-group button:hover {
+    background-color: #FFD700; /* Gold */
+}
+
+/* Read More Button */
+#readMoreBtn {
+    background-color: #8B4513; /* SaddleBrown */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+#readMoreBtn:hover {
+    background-color: #FFD700; /* Gold */
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunshine Cafe - Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f4f4f4; /* Solid default color */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #333;
+            color: white;
+            transform: translateX(-250px);
+            transition: transform 0.3s ease;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .hamburger {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .hamburger:focus {
+            outline: none;
+        }
+        nav.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <button class="hamburger" onclick="toggleNav()">☰</button>
+    <nav id="sidebar">
+        <ul>
+            <li><a href="index.htm">🏠 Home</a></li>
+            <li><a href="menu.htm">☕ Menu</a></li>
+            <li><a href="about.htm">📖 About Us</a></li>
+            <li><a href="contact.htm">📞 Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Our Menu</h1>
+        <p>Explore our delicious offerings!</p>
+    </header>
+
+    <marquee class="marquee-text" behavior="scroll" direction="left">Check out our delicious menu items!</marquee>
+
+    <main>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="view" value="list" checked onclick="document.querySelector('main').classList.remove('grid-view')"> List View
+            </label>
+            <label>
+                <input type="radio" name="view" value="grid" onclick="document.querySelector('main').classList.add('grid-view')"> Grid View
+            </label>
+        </div>
+        <div class="filter-group">
+            <button onclick="filterMenu('coffee')">Coffee</button>
+            <button onclick="filterMenu('desserts')">Desserts</button>
+            <button onclick="filterMenu('all')">Show All</button>
+        </div>
+        <section id="coffeeSection">
+            <h2>Coffee</h2>
+            <ul>
+                <li>
+                    <img src="French-Vanilla-Coffee.webp" alt="French Vanilla" class="menu-img">
+                    French Vanilla - $3.00
+                </li>
+                <li>
+                    <img src="iced-caramel-macchiato-1.jpg" alt="Caramel Macchiato" class="menu-img">
+                    Caramel Macchiato - $3.75
+                </li>
+                <li>
+                    <img src="PumpkinSpice.jpg" alt="Pumpkin Spice" class="menu-img">
+                    Pumpkin Spice - $3.50
+                </li>
+                <li>
+                    <img src="Espresso.jpg!d" alt="Espresso" class="menu-img">
+                    Espresso - $2.50
+                </li>
+                <li>
+                    <img src="latte.jpg" alt="Latte" class="menu-img">
+                    Latte - $3.25
+                </li>
+            </ul>
+        </section>
+
+        <section id="dessertsSection">
+            <h2>Desserts</h2>
+            <ul>
+                <li>
+                    <img src="donut.jpg" alt="Donuts" class="menu-img">
+                    Donuts - $1.50
+                </li>
+                <li>
+                    <img src="cherry-pie_806675-439.jpg" alt="Cherry Pie" class="menu-img">
+                    Cherry Pie - $2.75
+                </li>
+                <li>
+                    <img src="delicious-dessert-indoors_23-2151890043.jpg" alt="Cheesecake" class="menu-img">
+                    Cheesecake - $3.00
+                </li>
+                <li>
+                    <img src="brownies-with-buttercream-frosting-2.jpg" alt="Brownie" class="menu-img">
+                    Brownie - $2.00
+                </li>
+                <li>
+                    <img src="ice-cream.jpg" alt="Ice Cream" class="menu-img">
+                    Ice Cream - $2.50
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sunshine Cafe. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            if (!isLoggedIn) {
+                alert('You must log in to access the website.');
+                window.location.href = 'login.htm';
+            }
+        });
+
+        function toggleNav() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+
+        function filterMenu(category) {
+            const coffeeSection = document.getElementById('coffeeSection');
+            const dessertsSection = document.getElementById('dessertsSection');
+            if (category === 'coffee') {
+                coffeeSection.style.display = 'block';
+                dessertsSection.style.display = 'none';
+            } else if (category === 'desserts') {
+                coffeeSection.style.display = 'none';
+                dessertsSection.style.display = 'block';
+            } else {
+                coffeeSection.style.display = 'block';
+                dessertsSection.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunshine Cafe - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.htm">🏠 Home</a></li>
+            <li><a href="menu.htm">☕ Menu</a></li>
+            <li><a href="about.htm">📖 About Us</a></li>
+            <li><a href="contact.htm">📞 Contact</a></li>
+        </ul>
+    </nav>
+
+    <button class="hamburger" onclick="toggleNav()">⋮</button>
+    <nav id="sidebar">
+        <ul>
+            <li><a href="index.htm">🏠 Home</a></li>
+            <li><a href="menu.htm">☕ Menu</a></li>
+            <li><a href="about.htm">📖 About Us</a></li>
+            <li><a href="contact.htm">📞 Contact</a></li>
+        </ul>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            if (!isLoggedIn) {
+                alert('You must log in to access the website.');
+                window.location.href = 'login.htm';
+            }
+        });
+
+        function toggleNav() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+    </script>
+
+    <main>
+        <h1>Contact Us</h1>
+        <p>Address: 123 Padra city, Vadodara</p>
+        <p>Email: bhargavigohil098@gmail.com</p>
+        <p>Phone: +8128557986</p>
+        
+        <div class="map-container">
+            <h2>Find Us Here</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0195555555555!2d144.9630579153169!3d-37.8141079797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d8c3e1b0b1b1!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1633071234567!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sunshine Cafe. All rights reserved.</p>
+    </footer>
+</body>
+</html>
